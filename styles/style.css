@@ -1,0 +1,11 @@
+#root {
+    padding: 10px;
+    display: flex;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input {
+    margin: 5px 0;
+}
