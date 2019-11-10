@@ -33,7 +33,7 @@ function binarySearch($title, $key_value, $exp_line, $exp_value) {
     $key_value = preg_replace('/[^0-9]/', '', $key_value);
     $file = fopen($title, r);
     while (!feof($file)) {
-        $line = fgets($file);
+        $line = fgets($file, 4000);
         $arr = array_filter(explode($exp_line, $line));
         foreach ($arr as $key => $value) {
             $binary_arr[] = explode($exp_value, $value);
